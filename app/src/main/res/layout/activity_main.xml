@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1a1a1a"
     tools:context=".MainActivity">
 
     <WebView
@@ -15,44 +15,54 @@
     <LinearLayout
         android:id="@+id/urlInputLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="#1a1a1a"
         android:padding="32dp"
-        android:layout_gravity="center">
+        android:visibility="visible">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Введите URL вашей 3X-UI панели"
             android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="Введите полный URL-адрес вашей 3X-UI панели (например, http://192.168.1.10:20000)"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/urlEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="http://IP:ПОРТ"
+            android:hint="http://ip:порт"
             android:inputType="textUri"
-            android:autofillHints="url"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:background="@android:drawable/editbox_background" />
+            android:background="#2d2d2d"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA" />
 
         <Button
             android:id="@+id/saveUrlButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Загрузить и сохранить"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:background="@android:color/holo_blue_dark"
-            android:textColor="@android:color/white" />
+            android:text="ПОДКЛЮЧИТЬСЯ"
+            android:padding="16dp"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF" />
+            
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="ОЧИСТИТЬ НАСТРОЙКИ"
+            android:background="#FF5252"
+            android:textColor="#FFFFFF"
+            android:padding="12dp" />
     </LinearLayout>
 
 </FrameLayout>
