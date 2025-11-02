@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние нажатия -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+            <gradient
+                android:startColor="#1976D2"
+                android:endColor="#1565C0"
+                android:angle="90" />
+            <padding
+                android:left="24dp"
+                android:top="16dp"
+                android:right="24dp"
+                android:bottom="16dp" />
+        </shape>
+    </item>
+    
+    <!-- Обычное состояние -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+            <gradient
+                android:startColor="#2196F3"
+                android:endColor="#1976D2"
+                android:angle="90" />
+            <padding
+                android:left="24dp"
+                android:top="16dp"
+                android:right="24dp"
+                android:bottom="16dp" />
+        </shape>
+    </item>
+</selector>
+

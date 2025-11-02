@@ -6,63 +6,205 @@
     android:background="#1a1a1a"
     tools:context=".MainActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="top"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@android:drawable/progress_horizontal"
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#FF5252"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/urlInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#1a1a1a"
+            android:padding="32dp"
+            android:visibility="visible">
+
+            <!-- Заголовок -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3X-UI Панель"
+                android:layout_marginBottom="8dp"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Введите URL вашей панели"
+                android:layout_marginBottom="32dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#AAAAAA" />
+
+            <!-- Поле ввода URL -->
+            <EditText
+                android:id="@+id/urlEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="http://192.168.1.1:2053"
+                android:inputType="textUri"
+                android:imeOptions="actionDone"
+                android:minHeight="56dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#666666"
+                android:textSize="16sp"
+                android:focusableInTouchMode="true"
+                android:elevation="4dp" />
+
+            <!-- Кнопки действий -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/pingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="ПИНГ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_ping"
+                    android:elevation="6dp"
+                    android:stateListAnimator="@null" />
+
+                <Button
+                    android:id="@+id/saveUrlButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="ПОДКЛЮЧИТЬСЯ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_connect"
+                    android:elevation="6dp"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+
+            <!-- Карточка для результатов пинга -->
+            <LinearLayout
+                android:id="@+id/pingCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/card_ping"
+                android:visibility="gone"
+                android:elevation="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Результаты Ping"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/pingStatsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pingStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ожидание..."
+                        android:textSize="14sp"
+                        android:textColor="#AAAAAA"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/pingResultTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="monospace"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Кнопка очистки -->
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ОЧИСТИТЬ НАСТРОЙКИ"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/button_clear"
+                android:layout_marginTop="8dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- WebView ДОЛЖЕН быть ПОСЛЕДНИМ, чтобы быть поверх всех элементов -->
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
-
-    <LinearLayout
-        android:id="@+id/urlInputLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="#1a1a1a"
-        android:padding="32dp"
-        android:visibility="visible">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Введите URL вашей 3X-UI панели"
-            android:layout_marginBottom="16dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:textColor="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/urlEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="http://ip:порт"
-            android:inputType="textUri"
-            android:minHeight="48dp"
-            android:padding="12dp"
-            android:background="#2d2d2d"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#AAAAAA" />
-
-        <Button
-            android:id="@+id/saveUrlButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="ПОДКЛЮЧИТЬСЯ"
-            android:padding="16dp"
-            android:background="#2196F3"
-            android:textColor="#FFFFFF" />
-            
-        <Button
-            android:id="@+id/clearButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="ОЧИСТИТЬ НАСТРОЙКИ"
-            android:background="#FF5252"
-            android:textColor="#FFFFFF"
-            android:padding="12dp" />
-    </LinearLayout>
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:longClickable="true"
+        android:enabled="true"
+        android:soundEffectsEnabled="true"
+        android:hapticFeedbackEnabled="true" />
 
 </FrameLayout>
