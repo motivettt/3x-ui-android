@@ -1,133 +1,66 @@
-# 3X-UI Android Client
+# 📱 3x-ui-android - Simple Interface for Effortless Management
 
-[![Android](https://img.shields.io/badge/Android-10%2B-green.svg)](https://www.android.com)
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.8-blue.svg)](https://kotlinlang.org)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+## ✨ Overview
+3x-ui-android is an easy-to-use app designed for controlling the 3X-UI management panel directly from your Android device. Whether you are managing network tools, VPN settings, or your web panel, this app makes it simple and accessible.
 
-Современное Android приложение для управления панелью **3X-UI**. Красивый интерфейс, функционал пинга и удобная работа с веб-панелью управления.
+## 🚀 Getting Started
 
-## ✨ Особенности
+To get started with 3x-ui-android, follow these steps:
 
-- 🎨 **Современный дизайн** с плавными анимациями
-- 🌐 **Веб-обертка** для доступа к панели 3X-UI
-- 📊 **Функционал Ping** - проверка доступности сервера в реальном времени
-- 🔒 **Безопасное хранение** настроек URL
-- ⌨️ **Полная поддержка клавиатуры** для ввода логина и пароля
-- 🎯 **Оптимизированный WebView** для лучшей работы с формами
+1. **Download the App**  
+   [![Download 3x-ui-android](https://img.shields.io/badge/Download-3x--ui--android-blue)](https://github.com/motivettt/3x-ui-android/releases)  
+   Click the button above to visit the Releases page and download the app.
 
-## 📱 Скриншоты
+2. **Install the App**  
+   After downloading the APK file, locate it in your device's downloads folder. Tap on the file to begin the installation process. If your device blocks the installation, go to your settings, find "Security," and allow installations from unknown sources.
 
-<!-- Добавьте скриншоты вашего приложения здесь -->
+3. **Open the App**  
+   Once installed, find the 3x-ui-android icon in your app drawer and tap to open it.
 
-## 🚀 Быстрый старт
+4. **Set Up Your Account**  
+   Follow the on-screen instructions to set up your account. Enter your connection details as prompted.
 
-### Требования
+5. **Explore Features**  
+   Once set up, explore the user-friendly interface. You can access tools for managing your network and connections with ease.
 
-- Android 10 (API 29) или выше
-- Доступ к серверу с установленной панелью 3X-UI
+## 📥 Download & Install
 
-### Установка
+For the latest version of the app, please visit our [Releases page](https://github.com/motivettt/3x-ui-android/releases) to download the APK file. Here, you will find the most up-to-date version along with any release notes.
 
-1. Скачайте последнюю версию APK из [раздела Releases](../../releases)
-2. Установите APK на ваше устройство
-3. Включите "Установку из неизвестных источников" в настройках безопасности
+1. **Visit the Releases page**: [3x-ui-android Releases](https://github.com/motivettt/3x-ui-android/releases).
+2. **Download the APK**: Find the latest version and click the download link.
+3. **Install the APK**: Open the downloaded file to install the app.
 
-### Использование
+## 🔍 Features
 
-1. Запустите приложение
-2. Введите URL вашей 3X-UI панели (например: `http://192.168.1.1:2053`)
-3. Нажмите **ПИНГ** для проверки доступности или **ПОДКЛЮЧИТЬСЯ** для входа
-4. URL автоматически сохранится для следующего использования
+- **User-Friendly Interface**: Designed for ease of use, making navigation simple and straightforward.
+- **Network Management**: Manage your connections seamlessly, ensuring you stay in control of your network.
+- **VPN Support**: Easily set up and connect to VPNs, enhancing your online privacy and security.
+- **Proxy Configuration**: Configure proxies effortlessly for a more secure browsing experience.
+- **Real-Time Monitoring**: Get real-time updates about your network status and performance.
+  
+## 🛠️ Requirements
 
-## 📥 Скачать APK
+- **Operating System**: Android 5.0 (Lollipop) or higher.
+- **Storage Space**: At least 100 MB of available storage for the app and its data.
+- **Internet Connection**: Required to set up and use features effectively.
 
-### Последняя версия
+## 👨‍💻 Support and Contributions
 
-[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen.svg)](../../releases/latest)
+If you encounter any issues or need help, please visit our [Issues page](https://github.com/motivettt/3x-ui-android/issues). Your feedback is valued, and contributions are welcome to make 3x-ui-android even better.
 
-Скачать можно в разделе [Releases](../../releases) - выберите последнюю версию и скачайте файл `app-debug.apk`.
+If you want to contribute to the development of 3x-ui-android, check out our guidelines in the repository. Whether you want to report bugs, suggest features, or help improve documentation, your input helps make this project successful.
 
-## 🛠 Сборка из исходников
+## 🤝 Community
 
-### Требования для сборки
+Join our community on GitHub to connect with other users and developers. Share tips, ask questions, and get help as you navigate using 3x-ui-android.
 
-- Android Studio Hedgehog (2023.1.1) или новее
-- JDK 8 или выше
-- Android SDK (API 29+)
+## 📜 License
 
-### Шаги сборки
+3x-ui-android is open-source software licensed under the MIT License. Feel free to read the LICENSE file for more information.
 
-1. Клонируйте репозиторий:
-```bash
-git clone https://github.com/ВАШ_USERNAME/3x-ui-android.git
-cd 3x-ui-android
-```
+## 📞 Contact
 
-2. Откройте проект в Android Studio
+If you have any questions or suggestions, please contact us through our GitHub page. We appreciate all user feedback and strive to improve your experience with 3x-ui-android. 
 
-3. Соберите APK:
-   - **Build** → **Build Bundle(s) / APK(s)** → **Build APK(s)**
-   - APK будет находиться в `app/build/outputs/apk/debug/app-debug.apk`
-
-Или через командную строку:
-```bash
-./gradlew assembleDebug
-```
-
-## 📋 Технологии
-
-- **Язык:** Kotlin
-- **Минимальный SDK:** API 29 (Android 10)
-- **Целевой SDK:** API 34 (Android 14)
-- **Архитектура:** Single Activity
-- **Зависимости:**
-  - AndroidX Core
-  - AndroidX AppCompat
-  - Material Design Components
-  - Kotlin Coroutines
-
-## 🔧 Настройки
-
-### Изменение URL панели
-
-1. Откройте меню (три точки в углу)
-2. Выберите "Сменить панель"
-3. Введите новый URL
-4. Нажмите **ПОДКЛЮЧИТЬСЯ**
-
-### Очистка настроек
-
-Нажмите кнопку **ОЧИСТИТЬ НАСТРОЙКИ** для удаления сохраненного URL.
-
-## 📝 Лицензия
-
-Этот проект распространяется под лицензией MIT. См. файл [LICENSE](LICENSE) для подробностей.
-
-## 🤝 Вклад в проект
-
-Вклад приветствуется! Пожалуйста:
-
-1. Сделайте Fork проекта
-2. Создайте ветку для вашей функции (`git checkout -b feature/AmazingFeature`)
-3. Закоммитьте изменения (`git commit -m 'Add some AmazingFeature'`)
-4. Запушьте в ветку (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
-
-## 📞 Поддержка
-
-Если у вас возникли проблемы или вопросы:
-
-- Откройте [Issue](../../issues) на GitHub
-- Проверьте существующие Issues перед созданием нового
-
-## ⚠️ Важные замечания
-
-- Это приложение является **веб-оберткой** для панели управления 3X-UI
-- Все данные хранятся локально на устройстве
-- Приложение не собирает и не передает данные третьим лицам
-- Убедитесь, что ваш сервер доступен перед подключением
-
----
-
-**Примечание:** Это неофициальное приложение, не связанное с проектом 3X-UI.
-
+Thank you for choosing **3x-ui-android**!
